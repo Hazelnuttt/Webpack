@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage", //按需加载
+        "corejs": 2
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }], //装饰器
+    ["@babel/plugin-proposal-class-properties", { "loose": true }], //类属性
+    "@babel/plugin-transform-runtime" //减少代码量
+  ]
+}
