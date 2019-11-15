@@ -9,10 +9,10 @@ dll 功能在开发之前，抽离好，打好包
 
 ## tree-shaking(webpack 内置的)
 
-默认只支持 es6 的树摇晃，去除没有用的代码
-去除没有用的文件(副作用) // "sideEffects":true //但是会有额外的副作用 ==> // "sideEffects":['**/*.css']
-只在生产环境下被调用 // optimization: { usedExports:true } //提示的作用
-静态导入 //import {} from 'xxx' ; 动态的 //require ('xxx')
+- 默认只支持 es6 的树摇晃，去除没有用的代码
+- 去除没有用的文件(副作用) // "sideEffects":true //但是会有额外的副作用 ==> // "sideEffects":['**/*.css']
+- 只在生产环境下被调用 // optimization: { usedExports:true } //提示的作用
+- 静态导入 //import {} from 'xxx' ; 动态的 //require ('xxx')
 
 ## scope-hoisting(webpack 内置的)
 
