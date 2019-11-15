@@ -32,10 +32,9 @@ module.exports = () => {
         {
           test: /\.(jpe?g|png|gif|JPE?G|PNG|GIF)$/,
           use: {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              name: 'image/[name].[ext]',
-              limit: 1024 //如果大于1k,默认file-loader，貌似url-loader里有，不用再另外下载
+              name: 'image/[name].[ext]'
             }
           }
         }
