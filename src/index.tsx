@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 const imgSrc = require('./w.jpg')
 import './index.css'
 import './a.scss'
+// import calc from '../dll'
 
 interface IProps {
   num: number
@@ -14,7 +15,9 @@ class Counter extends React.Component<IProps, State> {
   handleClick = () => {
     this.setState({ count: this.state.count + 1 })
   }
+
   render() {
+    // let c = add(2, 3)
     return (
       <div>
         <div className="feature_hello">
@@ -24,6 +27,7 @@ class Counter extends React.Component<IProps, State> {
         <img src={imgSrc}></img>
         {this.state.count}
         <button onClick={this.handleClick}>点击</button>
+        {/* {c} */}
       </div>
     )
   }

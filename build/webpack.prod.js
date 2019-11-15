@@ -86,8 +86,16 @@ module.exports = () => {
         template: path.resolve(__dirname, '../public/index.html'), //模板
         filename: 'index.html', //生成html文件
         minify: {
-          removeAttributeQuotes: true,
-          collapseWhitespace: true
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          keepClosingSlash: true,
+          minifyJS: true,
+          minifyCSS: true,
+          minifyURLs: true
         }
       }),
       new MiniCssExtractPlugin({
